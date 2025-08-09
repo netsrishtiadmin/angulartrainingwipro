@@ -10,6 +10,8 @@ import { UsersComponent } from './component/users/users.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { BodyComponent } from './component/body/body.component';
 import { HobbiesComponent } from './component/hobbies/hobbies.component';
+import { FavouriteComponent } from './component/favourite/favourite.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HobbiesComponent } from './component/hobbies/hobbies.component';
     UsersComponent,
     MenuComponent,
     BodyComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    FavouriteComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
