@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input,Output } from '@angular/core';
 import { DataserviceService } from '../../service/dataservice.service';
 @Component({
   selector: 'app-users',
@@ -7,6 +7,7 @@ import { DataserviceService } from '../../service/dataservice.service';
   styleUrl: './users.component.css'
 })
 export class UsersComponent {
+  @Input() title: string = '';
   users: any[] = [];
   firstName: string = '';
   age: number = 0;
