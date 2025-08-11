@@ -12,6 +12,12 @@ import { BodyComponent } from './component/body/body.component';
 import { HobbiesComponent } from './component/hobbies/hobbies.component';
 import { FavouriteComponent } from './component/favourite/favourite.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { StylesampleComponent } from './component/stylesample/stylesample.component';
+import { Style2Component } from './component/style2/style2.component';
+import { ReversepipePipe } from './pipes/reversepipe.pipe';
+import { LifecycleComponent } from './component/lifecycle/lifecycle.component';
+import { MypipePipe } from './pipes/mypipe.pipe';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +30,12 @@ import { HighlightDirective } from './directives/highlight.directive';
     BodyComponent,
     HobbiesComponent,
     FavouriteComponent,
-    HighlightDirective
+    HighlightDirective,
+    StylesampleComponent,
+    Style2Component,
+    ReversepipePipe,
+    LifecycleComponent,
+    MypipePipe,
   ],
   imports: [
     BrowserModule,
