@@ -1,5 +1,6 @@
 import { Component,Input,Output } from '@angular/core';
 import { DataserviceService } from '../../service/dataservice.service';
+
 @Component({
   selector: 'app-users',
   standalone: false,
@@ -14,6 +15,15 @@ export class UsersComponent {
   user: any = {};
   userId: number = 0;
 constructor(private dataService: DataserviceService) {}
+
+  ngOnInit(): void {
+    this.dataService.getPosts().subscribe({
+      next: (data) => console.log('Data received:', data),
+      error: (err) => console.error('Final error after retries:', err),
+    });
+  }
+
+
 getusers() {
     this.dataService.getUsers().subscribe({
       next: (users) => this.users = users as any[],
@@ -34,7 +44,9 @@ getusers() {
         this.users.push(user);
         this.firstName = '';
         this.age = 0;
-      },
+      }
+      ,
+     
       error: (err) => console.error('Error adding user:', err)
     });
   }

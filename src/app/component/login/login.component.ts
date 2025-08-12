@@ -1,4 +1,4 @@
-import { Component,Input, Output, EventEmitter,signal} from '@angular/core';
+import { Component,Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -9,16 +9,7 @@ import { Component,Input, Output, EventEmitter,signal} from '@angular/core';
 export class LoginComponent {
  @Input() caption: string = '';
  @Output() login = new EventEmitter<object>();
- count = signal(0);
- increment() {
-    this.count.update(value => value + 1);
- }
- decrement() {
-    this.count.update(value => value - 1);
- }
- reset() {
-    this.count.set(0);
- }
+
   img = 'https://angular.io/assets/images/logos/angular/angular.png';
   username: string = '';
   password: string = '';

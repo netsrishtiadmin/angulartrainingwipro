@@ -17,6 +17,8 @@ import { Style2Component } from './component/style2/style2.component';
 import { ReversepipePipe } from './pipes/reversepipe.pipe';
 import { LifecycleComponent } from './component/lifecycle/lifecycle.component';
 import { MypipePipe } from './pipes/mypipe.pipe';
+import { SignalComponent } from './component/signal/signal.component';
+import { HtmlformComponent } from './component/htmlform/htmlform.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { MypipePipe } from './pipes/mypipe.pipe';
     ReversepipePipe,
     LifecycleComponent,
     MypipePipe,
+    SignalComponent,
+    HtmlformComponent,
   ],
   imports: [
     BrowserModule,

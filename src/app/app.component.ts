@@ -12,6 +12,7 @@ title = "My frontend app";
 myhobbies:any = [{name:'Reading',fav:false}, {name:'Travelling',fav:false}];
 link: string = '';
 today:string = "2025-08-11";
+username:string ="";
 jsonData = {
   "name": "John Doe"}
  parentData = 'Initial Data';
