@@ -8,13 +8,15 @@ import { noSpacesValidator } from '../../validators/no_space.validator';
   styleUrl: './reactiveform.component.css'
 })
 export class ReactiveformComponent {
-loginForm: FormGroup;
+  loginForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.loginForm = fb.group({
+    this.loginForm = this.fb.group(
+      {
       email: ['', [Validators.required, Validators.email, noSpacesValidator()]],
       password: ['', [Validators.required, Validators.minLength(6)]]
-    });
+    }
+  );
   }
 
   onSubmit() {

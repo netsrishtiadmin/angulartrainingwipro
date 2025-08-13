@@ -14,12 +14,17 @@ export class UsersComponent {
   age: number = 0;
   user: any = {};
   userId: number = 0;
+   errorMessage: string = '';
 constructor(private dataService: DataserviceService) {}
 
   ngOnInit(): void {
     this.dataService.getPosts().subscribe({
       next: (data) => console.log('Data received:', data),
-      error: (err) => console.error('Final error after retries:', err),
+      // error: (err) => console.error('Final error after retries:', err),
+       error: (error: Error) => {
+        this.errorMessage = error.message;
+      }
+    
     });
   }
 

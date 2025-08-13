@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HtmlformComponent {
   onSubmit(form: any) {
-    console.log('Form submitted:', form);
+    console.log('Form submitted:', form.value);
   }
 
 }
