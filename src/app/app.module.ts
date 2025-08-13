@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FileOpsComponent } from './component/file-ops/file-ops.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { UsersComponent } from './component/users/users.component';
@@ -19,6 +19,7 @@ import { LifecycleComponent } from './component/lifecycle/lifecycle.component';
 import { MypipePipe } from './pipes/mypipe.pipe';
 import { SignalComponent } from './component/signal/signal.component';
 import { HtmlformComponent } from './component/htmlform/htmlform.component';
+import { ReactiveformComponent } from './component/reactiveform/reactiveform.component';
 
 
 @NgModule({
@@ -40,11 +41,12 @@ import { HtmlformComponent } from './component/htmlform/htmlform.component';
     MypipePipe,
     SignalComponent,
     HtmlformComponent,
+    ReactiveformComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-        
+        ReactiveFormsModule,
     HttpClientModule
 
   ],
